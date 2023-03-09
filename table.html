@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My Timetable</title>
+	<link rel="stylesheet" href="style.css">
+    <script src="./script.js"></script>
+    <style>
+        table,td,tr,th{
+            border: 2px solid red;
+            border-collapse: collapse;
+        }
+        table{
+            display: inline-block;
+        }
+        body{
+            background-color: gray;
+            color: white;
+            height: 15in;
+        }
+        ul li{
+            margin: 30px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            background-color: red;
+            padding: 10px;
+          
+        }
+        a:hover{
+            background-color: white;
+            color: red;
+
+        }
+        ul{
+            list-style: none;
+        }
+        #add-row-col-container{
+            border: 2px solid red;
+            padding: 1in;
+            display: inline-block;
+        }
+        main{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+	<header class="timetable-header">
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="#">My Timetable</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+     
+		<div id="add-row-col-container">
+            <form>
+				<h2>Add Row</h2>
+				<label for="add-row-header">Choose:</label>
+				<select class="form-select add-header-select" id="add-row-header">
+					<option value="Monday">Monday</option>
+					<option value="Tuesday">Tuesday</option>
+					<option value="Wednesday">Wednesday</option>
+					<option value="Thursday">Thursday</option>
+					<option value="Friday">Friday</option>
+				</select>
+				<button type="button" id="add-row-btn">Add</button>
+			</form>
+			<form>
+				<h2>Add Column</h2>
+				<label for="add-col-header">Choose:</label>
+				<select class="form-select add-header-select" id="add-col-header">
+					<option value="0830-1000">0830-1000</option>
+					<option value="1000-1130">1000-1130</option>
+					<option value="1130-1300">1130-1300</option>
+					<option value="1300-1430">1300-1430</option>
+					<option value="1430-1600">1430-1600</option>
+					<option value="1600-1730">1600-1730</option>
+				</select>
+				<button type="button" id="add-col-btn">Add</button>
+			</form>
+			<form>
+				<h2>Add value</h2>
+				<label for="add-agenda-input">value:</label>
+				<input type="text" id="add-agenda-input" name="add-agenda-input">
+				<label for="add-agenda-header">Day:</label>
+				<select id="add-agenda-header" name="add-agenda-header">
+					<option value="Monday">Monday</option>
+					<option value="Tuesday">Tuesday</option>
+					<option value="Wednesday">Wednesday</option>
+					<option value="Thursday">Thursday</option>
+					<option value="Friday">Friday</option>
+				</select>
+				<label for="add-agenda1-header">Time:</label>
+				<select id="add-agenda1-header" name="add-agenda1-header">
+					<option value="0830-1000">0830-1000</option>
+					<option value="1000-1130">1000-1130</option>
+					<option value="1130-1300">1130-1300</option>
+					<option value="1300-1430">1300-1430</option>
+					<option value="1430-1600">1430-1600</option>
+					<option value="1600-1730">1600-1730</option>
+				</select>
+				<button type="button" id="add-btn">Add</button>
+			</form>
+		</div>
+
+		<h1 class="w">My Timetable</h1>
+		<div id="table-container">
+			<table id="schedule-table">
+				<thead>
+					<tr>
+						<th></th> 
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+	</main>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
